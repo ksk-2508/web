@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fitness</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" >
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style media="screen">
+      *       {
+				box-sizing: border-box;
+			}
+      body    {
+				font-family: Arial;
+				  margin: 0;
+					text-align: center;
+			}
+			input 	{
+				width:120px;
+				height:25px ;
+				margin:5px auto 5px auto;
+				box-sizing: border-box;
+			}
+			.container{}
+      .header {
+			 padding:70px;
+			 text-align: center;
+			 background: #1abc9c;
+			 color: white;
+			 background-image: url('h2.jpg');
+			 background-repeat: no-repeat;
+			 background-attachment: fixed;
+			 background-size: cover;
+			}
+      .navbar {
+				display: flex;
+				background-color: #333;
+				flex-direction: row-reverse;
+			}
+      .navbar a {
+				color: white;
+				padding: 14px 20px;
+				text-decoration: none;
+				text-align: center;
+			}
+      .navbar a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+      .row    {
+				display: flex;
+				flex-wrap: wrap;
+			}
+      .main   {
+				flex: 90%;
+				background-color:lightblue;
+				padding: 20px;
+			}
+      .sidenav   {
+				display: flex;
+				flex: 10%;
+				flex-direction: column;
+				background-color:black;
+				padding: 20px;
+				background-image: url('h1.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+      .footer {
+				padding: 3px;
+				text-align: center;
+				background: #ddd ;
+				position:bottom;
+			}
+      @media screen and (max-width: 700px) {.row, .navbar { flex-direction: column;}
+    </style>
+		<script>
+			function inputdetails(){
+				var success = false;
+				var username = document.register.name.value;
+				var email = document.register.email.value;
+				var pwd = document.register.password.value;
+				var confirm = document.register.confirm.value;
+
+				if(username == null ||username==""){
+					window.alert("Name cant be blank");
+					name.focus();
+					success = false;
+					return false;
+				}else{
+					success=true;
+				}
+				if(email == null || email ==""){
+					window.alert("Please Enter your Email");
+					email.focus();
+					success=false;
+					return false;
+				}else{
+					success=true;
+				}
+				if(pwd.length<6){
+					window.alert("Password must be at least 6 characters long.");
+					return false;
+					success=false;
+				}else{
+					success=true;
+				}
+				if(confirm == null || confirm ==""){
+					window.alert("Please Confirm your Password");
+					confirm.focus();
+					success=false;
+					return false;
+				}else{
+					success=true;
+				}
+				if(pwd == confirm){
+					return true;
+					success=true;
+				}else{
+					window.alert("Passwords Do Not Match!")
+					return false;
+					success=false;
+				}
+				if(success == true){
+					<a href="www.google.com"></a>
+				}
+
+			}
+			function validatelogin(){
+				var mail = document.login.email.value;
+				if(mail == null){
+					alert("Name cant be blank");
+					return false;
+				}
+			}
+		</script>
+</head>
+
+<body>
+	<div class="container">
+	 <div class="header">
+	 <h1>Monitor your health</h1>
+    </div>
+    <div class="navbar">
+      <a href="#Login">Login</a>
+    </div>
+    <div class="row">
+      <div class="main">
+        <h2>What this website is?</h2>
+				<div>
+				<fieldset>
+				<legend style:text-align:"center";>Create Account</legend>
+					<form name="register" method="post" action="/signup" onsubmit="return inputdetails()">
+					  <input type="text" name="name" placeholder="Name" id="uname"	><br>
+					  <input type="email" name="email" placeholder="Email" id="umail"><br>
+					  <input type="password" name="password" placeholder="Password" id="upass"><br>
+						<input type="password" name="confirm" placeholder="Confirm Password" id="cpass"><br><br>
+						<button type="submit" name="signup">Sign Up</button>
+						<input type="reset" value="Reset">
+					</form>
+				</fieldset>
+				<hr>
+
+				<form  name="login" action="/login" method="post">
+					<input type="email" name="email" placeholder="Email" required><br>
+					<input type="password" name="password" placeholder="Password" required><br>
+					<a href="#">Forgot Your Password</a><br><br>
+					<button type="submit" name="signin">Sign in</button>
+					<input type="reset" value="Reset">
+				</form>
+
+
+				</div>
+      </div>
+
+      <div class="sidenav">
+        <a href="#link1">Link1</a>
+        <a href="#link2">Link2</a>
+        <a href="#link3">Link3</a>
+      </div>
+    </div>
+</div>
+		<div class="footer">
+      <h2>Footer</h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body    {
+  font-family: Arial;
+  margin: 0;
+  text-align: center;
+}
+input 	{
+  width:20%;
+  margin:5px auto 5px auto;
+  box-sizing: border-box;
+}
+*       {
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 30px;  text-align: center;  background: #1abc9c;  color: white;
+}
+.navbar {
+  display: flex;  background-color: #333;flex-direction: row-reverse;
+}
+.navbar a {
+  color: white;  padding: 14px 20px;  text-decoration: none;  text-align: center;
+}
+.navbar a:hover {
+  background-color: #ddd;  color: black;
+}
+.row    {
+  display: flex;  flex-wrap: wrap;
+}
+.main   {
+  flex: 90%;background-color: lightblue;padding: 20px;
+}
+.personaldetails{
+  text-align: center;
+}
+.displayData{
+  text-align: justify;
+}
+.sidenav   {
+  display: flex; flex: 10%;flex-direction: column;  background-color:black;  padding: 20px;
+}
+.footer {
+  padding: 3px;text-align: center;  background: #ddd;
+}
+@media screen and (max-width: 700px) {.row, .navbar { flex-direction: column;}
