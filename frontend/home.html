@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="validate.js">
+  </head>
+  <body>
+    <div class="header"><h1>Monitor your health</h1></div>
+     <div class="navbar">
+       <a href="#Login">Login</a>
+     </div>
+     <div class="main">
+       <h2>What this website is?</h2>
+       <div>
+       <fieldset>
+       <legend style:"text-align:center">Create Account</legend>
+         <form name="register" method="post" action="/signup" onsubmit="return inputdetails()">
+           <input type="text" name="name" placeholder="Name" id="uname"	><br>
+           <input type="email" name="email" placeholder="Email" id="umail"><br>
+           <input type="password" name="password" placeholder="Password" id="upass"><br>
+           <input type="password" name="confirm" placeholder="Confirm Password" id="cpass"><br><br>
+           <button type="submit" name="signup">Sign Up</button>
+           <input type="reset" value="Reset">
+         </form>
+       </fieldset>
+       <hr>
+
+       <form  name="login" action="/login" method="post">
+         <input type="email" name="email" placeholder="Email" required><br>
+         <input type="password" name="password" placeholder="Password" required><br>
+         <a href="#">Forgot Your Password</a><br><br>
+         <button type="submit" name="signin">Sign in</button>
+         <input type="reset" value="Reset">
+       </form>
+
+       </div>
+     </div>
+     <div class="sidenav">
+       <a href="#link1">Link1</a>
+       <a href="#link2">Link2</a>
+       <a href="#link3">Link3</a>
+     </div>
+     <div class="footer">
+       <h2>Footer</h2>
+     </div>
+
+  </body>
+</html>
