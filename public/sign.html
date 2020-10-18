@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Signup/Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="javascript" href="validate.js">
+</head>
+
+<body>
+  <div class="">
+    <img src="images/h2.jpg" alt="">
+  </div>
+  <div class="main">
+
+    <form class="" action="/" method="post">
+    <button type="submit" name="signin">Sign-in</button>
+    </form>
+
+    <form class="" action="/" method="post">
+    <button type="submit" name="signup">Sign-up</button>
+    </form>
+
+      <fieldset>
+        <legend style:"text-align:center">Create Account</legend>
+        <form name="register" method="post" action="/signup" onsubmit="return inputdetails()">
+          <input type="text" name="name" placeholder="Name" id="uname"><br>
+          <input type="email" name="email" placeholder="Email" id="umail"><br>
+          <input type="password" name="password" placeholder="Password" id="upass"><br>
+          <input type="password" name="confirm" placeholder="Confirm Password" id="cpass"><br><br>
+          <button type="submit" name="signup">Sign Up</button>
+          <input type="reset" value="Reset">
+        </form>
+      </fieldset>
+
+      <form name="login" action="/login" method="post">
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <a href="#">Forgot Your Password</a><br><br>
+        <button type="submit" name="signin">Sign in</button>
+        <input type="reset" value="Reset">
+      </form>
+
+  </div>
+
+  <div class="">
+    <h2>Footer</h2>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BMI CALCULATOR</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<script type="text/javascript">
+	function calculate() {
+
+		var height = document.bmi.Height.value;
+		var weight = document.bmi.Weight.value;
+		var h = parseInt(height);
+		var w = parseInt(weight);
+		var result = w / h * 100 * 100 * h;
+
+		if (result < 18.5) {
+			document.getElementById("result").value = "underweight";
+			return false;
+
+		} else if (18.5 < result && result > 24.9) {
+			document.getElementById("result").value = "Normal";
+			return false;
+
+
+		} else if (25 < result && result < 29.9) {
+			document.getElementById("result").value = "Overweight";
+			return false;
+
+
+		} else {
+			document.getElementById("result").value = "Obese";
+			return false;
+
+		}
+
+
+
+	}
+</script>
+
+<body>
+	<div id="header">
+		<img src='images/personalH.jpg'>
+
+	</div>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="routine.html">Tasks</a>
+	</div>
+	<div class="row">
+		<div class="main">
+			<form name="bmi" action="#" method="post">
+				<label for="">Height: </label>
+				<input type="text" name="Height" placeholder="Height in cm" required>
+				<label for="">Weight: </label>
+				<input type="text" name="Weight" placeholder="Weight in cm" required>
+				<button type="button" name="calc" onclick="calculate()">Submit</button>
+				<input type="reset" name="reset" value="Reset"><br>
+				<label>BMI:</label>
+				<input type="text" id="result" name="res" disabled="disabled">
+
+			</form><br><br>
+			<img src=images/bmi2.png width="450" ; height="400">
+</body>
+
+</html>

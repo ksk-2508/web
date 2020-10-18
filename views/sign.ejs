@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login/Signup</title>
+  <link rel="stylesheet" href="/sign.css">
+  <link rel="" href="validate.js">
+</head>
+
+<body>
+  <div class="header">
+    <img src="images/h2.jpg" alt="">
+  </div>
+
+  <div class="main">
+    <form class="" action="/1" method="post">
+    <button type="submit" name="signin">Sign-in</button>
+    </form>
+
+    <form class="" action="/2" method="post">
+    <button type="submit" name="signup">Sign-up</button>
+    </form>
+
+
+    <% if (buttonPressed === "signup"){ %>
+      <fieldset>
+        <legend style:"text-align:center">Create an account</legend>
+        <form name="register" method="post" action="/signup" onsubmit="return inputdetails()">
+          <input type="text" name="name" placeholder="Name" id="uname"><br>
+          <input type="email" name="email" placeholder="Email" id="umail"><br>
+          <input type="password" name="password" placeholder="Password" id="upass"><br>
+          <input type="password" name="confirm" placeholder="Confirm Password" id="cpass"><br><br>
+          <button type="submit" name="signup">Sign Up</button>
+          <input type="reset" value="Reset">
+        </form>
+      </fieldset>
+  <%  } else if (buttonPressed === "signin"){ %>
+      <fieldset>
+        <legend>Login</legend>
+        <form name="login" action="/login" method="post">
+          <input type="email" name="email" placeholder="Email" required autofocus><br>
+          <input type="password" name="password" placeholder="Password" required><br>
+          <button type="submit" name="signin">Sign in</button>
+          <input type="reset" value="Reset">
+        </form>
+      </fieldset>
+    <% } %>
+
+  </div>
+
+  <div class="">
+    <h2>Footer</h2>
+  </div>
+
+</body>
+
+</html>

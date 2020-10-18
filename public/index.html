@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fitness</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style media="screen">
+      *       {
+				box-sizing: border-box;
+			}
+      body    {
+				font-family: Arial;
+				  margin: 0;
+					text-align: center;
+			}
+			input 	{
+				width:120px;
+				height:25px ;
+				margin:5px auto 5px auto;
+				box-sizing: border-box;
+			}
+			.container{}
+      .header {
+			 padding:70px;
+			 text-align: center;
+			 background-color:black;
+
+			}
+      .navbar {
+				display: flex;
+				background-color: #4d4d4d;
+				flex-direction: row-reverse;
+			}
+      .navbar a {
+				color: white;
+				padding: 14px 20px;
+				text-decoration: none;
+				text-align: center;
+			}
+      .navbar a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+
+      .row    {
+				display: flex;
+				flex-wrap: wrap;
+			}
+      .main   {
+				flex: 90%;
+				background-color:#dad7d7;
+				padding: 20px;
+				background-image: url('b3.jpg');
+				background-repeat: no-repeat;
+			    background-size: cover;
+			    text-align: left;
+
+			}
+		#para1{
+			font-size: 20px;
+		}
+		#para2{
+			font-size: 20px;
+		}
+		#para3{
+			font-size: 20px;
+		}
+		#para4{
+			font-size: 20px;
+		}
+		.footer {
+
+				text-align: center;
+
+				position:bottom;
+			}
+      @media screen and (max-width: 700px) {.row, .navbar { flex-direction: column;}}
+    </style>
+		<script>
+			function inputdetails(){
+				var success = false;
+				var username = document.register.name.value;
+				var email = document.register.email.value;
+				var pwd = document.register.password.value;
+				var confirm = document.register.confirm.value;
+
+				if(username == null ||username==""){
+					window.alert("Name cant be blank");
+					name.focus();
+					success = false;
+					return false;
+				}else{
+					success=true;
+				}
+				if(email == null || email ==""){
+					window.alert("Please Enter your Email");
+					email.focus();
+					success=false;
+					return false;
+				}else{
+					success=true;
+				}
+				if(pwd.length<6){
+					window.alert("Password must be at least 6 characters long.");
+					return false;
+					success=false;
+				}else{
+					success=true;
+				}
+				if(confirm == null || confirm ==""){
+					window.alert("Please Confirm your Password");
+					confirm.focus();
+					success=false;
+					return false;
+				}
+				if(pwd == confirm){
+					return true;
+				}else{
+					window.alert("Passwords Do Not Match!")
+					return false;
+				}
+			}
+			function validatelogin(){
+				var mail = document.login.email.value;
+				if(mail == null){
+					alert("Name cant be blank");
+					return false;
+				}
+			}
+			function() {
+
+				var img = document.getElementById('header').firstChild;
+					img.onload = function() {
+					    if(img.height > img.width) {
+					        img.height = '100%';
+
+					        img.width = 'auto';
+					    }
+				};
+
+}
+		</script>
+</head>
+
+<body>
+	<div class"container">
+	 <div class="header">
+	 	<img src='images/h1.jpg'>
+      Monitor your health
+    </div>
+    <div class="navbar">
+
+
+       <a class="active" href="/sign">Sign Up/Sign In</a>
+
+    </div>
+    <div class="row">
+      <div class="main">
+        <h2></h2>
+        <div>
+	        <img src="images/main5.jpg" align="right" style: width=20% height=40%>
+	        <p id="para1">Being physically fit means you are able to engage in consistent exercise because your cardiovascular system is healthy, your body is flexible and your muscles are strong.
+	        In addition, physical fitness refers to your ability to perform endurance activities and have a healthy ratio of muscle and fat on your body.Achieving a healthy level of physical fitness offers many health benefits, making it an important goal for all people.
+
+	        </p>
+        </div> <br><br><br><br><br><br><br><br><br><br>
+        <div>
+        <img src="images/healthtrack.jpg"  align="left" style: width=20%
+        height=40%>
+        <br><br>
+        <p id="para2" > &nbsp; &nbsp; Our website helps you in monitoring your health and providing ways to keep a track on your diet.</p>
+
+    </div> <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div>
+        <img src="images/todo.jpg"  align="right" style: width=20%
+        height=40%>
+        <br><br><br><br>
+        <p id="para3" > &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Set your goals and accomplish it in time by setting your routines.</p>
+
+    </div> <br><br><br><br>
+    <div>
+        <img src="images/bmi3.png"  align="left" style: width=20%
+        height=40%>
+        <br><br><br><br>
+        <p id="para4" > &nbsp; &nbsp; &nbsp; &nbsp;  Your physical heath is of utmost importance. Check your BMI from BMI calculator.</p>
+
+
+
+    </div>
+
+
+
+        </div>
+
+     </div>
+
+		<div class="footer">
+
+    </div>
+</body>
+</html>
