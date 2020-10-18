@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+    function() {
+
+        var img = document.getElementById('header').firstChild;
+          img.onload = function() {
+              if(img.height > img.width) {
+                  img.height = '100%';
+                  
+                  img.width = 'auto';
+              }
+        };
+
+}
+    </script>
+  </head>
+ 
+  <body>
+        <div id="header">
+          <img src='personalH.jpg'>
+          
+        </div>
+        <div class="navbar">
+          <a href="">Login</a>
+          <a href="index.html">Home</a>
+          <a href="#link2">Tasks</a>
+          <a href="BMI.html">BMI</a>
+         
+        </div>
+        <div class="row">
+          <div class="main">
+           <h2>MONITOR YOUR HEALTH!</h2>
+            <fieldset>
+              <legend><b>Enter Your Details</b></legend>
+              <div class="personaldetails">
+                <form name="details" action="#" method="post" >
+                  <label for="">Name: </label>
+                  <input type="text" name="userName" value="" required>
+
+                  <br>
+
+                  <label for="">Date of Birth: </label>
+                  <input type="date" name="dob" value="" required>
+
+                  <br>
+
+                  <label for="">Gender: </label>
+                  <select class="" name="gender" required>
+                    <option value="">Select your Gender</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                  </select>
+
+                  <br>
+
+                  <label for="">Height</label>
+                  <input type="text" name="height" placeholder="Enter in centimeters(cm)" required>
+                  <br>
+                  <label for="">Weight</label>
+                  <input type="text" name="weight" placeholder="Enter in kilograms(kg)" required>
+                  <br>
+                  <label for="">Any health issues: </label>
+                  <textarea name="healthIssues" rows="10" cols="50"></textarea>
+                  <br>
+                  <input type="submit" name="" value="Submit">
+                </form>
+                </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend><b>Your health</b></legend>
+                <div class="displayData">
+                  <label for="">Your Name: </label>
+                  <label for=""></label>
+                  <br>
+                  <label for="">Your Age :</label>
+                  <label for=""></label>
+                  <br>
+                  <label for="">Your Height: </label>
+                  <label for=""></label>
+                  <br>
+                  <label for="">Your Weight: </label>
+                  <label for=""></label>
+                  <br>
+                  <label for="">Your BMI: </label>
+                  <label for=""></label>
+                </div>
+                </fieldset>
+
+                <hr>
+
+                <h2>Your Progress</h2>
+              </div>
+           <!--dont delete the sidenav division-->
+          <div class="sidenav">
+            
+          </div>
+        </div>
+
+        <hr>
+
+        <!--<div class="footer">
+          <h2>Footer</h2>
+        </div>-->
+        
+  </body>
+</html>

@@ -1,0 +1,66 @@
+body    {
+  font-family: Arial;
+  margin: 0;
+  text-align: center;
+}
+input 	{
+  width:20%;
+  margin:5px auto 5px auto;
+  box-sizing: border-box;
+}
+*       {
+  box-sizing: border-box;
+}
+
+#header {
+  padding: 30px;  
+  background-image: url('personalH.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+
+}
+/*.personalH{
+  width: 180px;
+  /*height:180px;*/
+/*}*/
+.navbar {
+  display: flex;  background-color:#003d66;flex-direction: row-reverse;
+}
+.navbar a {
+  color: white;  padding: 14px 20px;  text-decoration: none;  text-align: center;
+}
+.navbar a:hover {
+  background-color: #ddd;  color: black;
+}
+.row    {
+  display: flex;  flex-wrap: wrap;
+}
+.main   {
+  flex: 85%;background-color:#00cccc;padding: 20px;
+  background-image: url('main4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+.personaldetails{
+  text-align: justify;
+}
+.displayData{
+  text-align: justify;
+}
+.sidenav   {
+  display: flex;
+  flex: 15%;
+  flex-direction: column; 
+  background-color:black; 
+  padding: 20px;
+  background-image: url('personalS.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+/*.footer {
+  padding: 3px;text-align: center;  background: #ddd;
+}*/
+@media screen and (max-width: 700px) {.row, .navbar { flex-direction: column;}
